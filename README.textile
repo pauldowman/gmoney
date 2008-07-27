@@ -3,6 +3,7 @@ h2. GMoney
 h3. Automatically download your bank transactions into a Google Spreadsheet
 
 "http://github.com/pauldowman/gmoney":http://github.com/pauldowman/gmoney
+
 Copyright 2007 Paul Dowman, http://pauldowman.com/
 
 
