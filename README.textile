@@ -4,11 +4,11 @@ h3. Automatically download your bank transactions into a Google Spreadsheet
 
 "http://github.com/pauldowman/gmoney":http://github.com/pauldowman/gmoney
 
-GMoney automatically downloads your bank account transactions and inserts them into a Google spreadsheet. Transactions from each account go into a different sheet, and you can write additional sheets to generate summaries, spending reports and charts. (I have a pretty complex spreadsheet with spending reports and graphs but I don't know a good way to make that general and shareable, ideas are welcome.)
+GMoney downloads your bank account transactions and inserts them into a Google spreadsheet. Transactions from each account go into a different sheet, and you can write additional sheets to generate summaries, spending reports and charts. (I have a pretty complex spreadsheet with spending reports and graphs but I don't know a good way to make that general and shareable, ideas are welcome.)
 
 GMoney requires the "mechanize":http://mechanize.rubyforge.org/mechanize/ and "ofx-parser":http://ofx-parser.rubyforge.org/ gems.
 
-You'll need to roll up your sleeves and write a bit of code though, you'll probably need to write a few lines of code to script login in to your bank and clicking the "download transactions" link, but it's not that hard, it's done using the awesome "mechanize":http://mechanize.rubyforge.org/mechanize/ library. See "accounts/pc_financial.rb":http://github.com/pauldowman/gmoney/tree/master/accounts/pc_financial.rb for an example. If you do that please send me a patch or pull request and I'll add your bank.
+You'll need to roll up your sleeves and write a bit of code though, you'll probably need to write a few lines of code to script logging in to your bank and clicking the "download transactions" link, but it's not that hard, it's done using the awesome "mechanize":http://mechanize.rubyforge.org/mechanize/ library. See "accounts/pc_financial.rb":http://github.com/pauldowman/gmoney/tree/master/accounts/pc_financial.rb for an example. If you do that please send me a patch or pull request and I'll add your bank.
 
 Your account details (login, account id, password, etc) go into $HOME/.gmoney/config.rb
 
