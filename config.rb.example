@@ -1,3 +1,5 @@
+# put this in $HOME/.gmoney/config.rb
+
 @gdata_user = 'you@gmail.com'
 @gdata_pass = 'secret'
 @gs_key = 'abc123'
