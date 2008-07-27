@@ -3,6 +3,8 @@ h2. GMoney
 h3. Automatically download your bank transactions into a Google Spreadsheet
 
 "http://github.com/pauldowman/gmoney":http://github.com/pauldowman/gmoney
+Copyright 2007 Paul Dowman, http://pauldowman.com/
+
 
 GMoney downloads your bank account transactions and inserts them into a Google spreadsheet. Transactions from each account go into a different sheet, and you can write additional sheets to generate summaries, spending reports and charts. (I have a pretty complex spreadsheet with spending reports and graphs but I don't know a good way to make that general and shareable, ideas are welcome.)
 
@@ -12,3 +14,6 @@ You'll need to roll up your sleeves and write a bit of code though, you'll proba
 
 Your account details (login, account id, password, etc) go into $HOME/.gmoney/config.rb
 
+This is free software, and you are welcome to redistribute it under 
+certain conditions. This software comes with ABSOLUTELY NO WARRANTY.
+See the file named COPYING for details.
