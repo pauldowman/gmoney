@@ -1,0 +1,8 @@
+Provide a template or automatic way to set up the Google spreadsheet with spending reports and calculations.
+
+use gdata token?
+
+store downloaded data in case of exception
+
+easily allow input from file instead of download 
+- maybe if a specially-named file exists use it?

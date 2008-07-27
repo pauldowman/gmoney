@@ -1,0 +1,9 @@
+@gdata_user = 'you@gmail.com'
+@gdata_pass = 'secret'
+@gs_key = 'abc123'
+
+@accounts = [
+  PcFinancial.new(:worksheet => "1", :userid => "userid", :password => "password", :account_id => "account_id"),
+  CibcVisa.new(:worksheet => "2", :userid => "userid", :password => "password"),
+  IngCanada.new(:worksheet => "3", :userid => "userid", :password => "password", :street => "mystreet", :colour => "purple", :car => "red", :account_id => "account_id")
+]
