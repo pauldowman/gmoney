@@ -4,7 +4,7 @@ class PcFinancial < BankAccount
   end
   
   def download_data
-    # return File.read("#{ENV['HOME']}/Desktop/PCF.qfx")
+    # return File.read("#{ENV['HOME']}/Downloads/PCF.qfx")
     
     page = agent.get("https://www.txn.banking.pcfinancial.ca/a/authentication/preSignOn.ams")
     form = page.form("SignOnForm")

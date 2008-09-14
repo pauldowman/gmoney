@@ -4,7 +4,7 @@ class CibcVisa < CreditCardAccount
   end
   
   def download_data
-    # return File.read("#{ENV['HOME']}/Desktop/cibcvisa.qfx")
+    # return File.read("#{ENV['HOME']}/Downloads/cibcvisa.ofx")
     
     agent.keep_alive = false
     
@@ -19,6 +19,7 @@ class CibcVisa < CreditCardAccount
     
     page = agent.get "https://www.cibconline.cibc.com/olbtxn/accounts/TransactionDownload1.cibc"
     form = page.form("transactionDownloadForm")
+    form.selectedFMSPackage = "0"
     page = form.submit
     
     data = page.body
