@@ -19,20 +19,22 @@ class Spreadsheet
     $VERBOSE = nil
 
     @spreadsheet_id = spreadsheet_id
-    service = 'wise'
-    source = 'gdata-ruby'
     @url = 'spreadsheets.google.com'
 
-    response = Net::HTTPS.post_form(GOOGLE_LOGIN_URL,
-      {'Email'   => email,
-       'Passwd'  => password,
-       'source'  => source,
-       'service' => service })
-
+    response = Net::HTTPS.post_form(
+      GOOGLE_LOGIN_URL,
+      'accountType' => 'HOSTED_OR_GOOGLE',
+      'Email'       => email,
+      'Passwd'      => password,
+      'service'     => 'wise'
+    )
+    
     response.error! unless response.kind_of? Net::HTTPSuccess
+    
+    auth_token = response.body.match(/Auth=(.*)$/)[1]
 
     @headers = {
-     'Authorization' => "GoogleLogin auth=#{response.body.split(/=/).last}",
+     'Authorization' => "GoogleLogin auth=#{auth_token}",
      'Content-Type'  => 'application/atom+xml'
     }
   end
