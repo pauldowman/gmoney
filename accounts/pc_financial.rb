@@ -15,7 +15,7 @@ class PcFinancial < BankAccount
     
     page = agent.get("https://www.txn.banking.pcfinancial.ca/a/banking/accounts/downloadTransactions1.ams")
     form = page.form("DownloadTransactionsForm")
-    form.fields.name('fromAccount').value = config[:account_id]
+    form['fromAccount'] = config[:account_id]
     submit_button = nil
     form.buttons.each {|b| submit_button = b if b.value = "Download transactions" }
     
