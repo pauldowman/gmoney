@@ -49,7 +49,8 @@ class IngCanada < BankAccount
     
     agent.submit(form, submit_button)
     page = agent.get("https://secure.ingdirect.ca/INGDirect.html?command=displayDownLoadTransactionsCommand&fill=1")
-    page = agent.click(page.links.text("DownLoad"))
+    link = page.links.select {|l| l.text == "DownLoad"}.first
+    page = agent.click(link)
     
     data = page.body
     
