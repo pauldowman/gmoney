@@ -49,11 +49,9 @@ class AccountBase
         "memo" => t.memo,
         "payee" => t.payee,
         "siccode" => t.sic,
-        "type" => t.type
+        "type" => t.type,
+        "balance" => @balance
       }
-    end
-    if txns.size > 0
-      txns.last["balance"] = @balance
     end
     txns
   end
