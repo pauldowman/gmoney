@@ -9,6 +9,10 @@ class AccountBase
     self.config = config
   end
   
+  def name
+    config[:name]
+  end
+  
   def get_data
     return if @data
     
@@ -42,9 +46,11 @@ class AccountBase
     
     txns = @ofx_txns.collect do |t|
       {
+        "accountname" => self.name,
         (t.amount.to_f >= 0 ? "deposit" : "withdrawal") => t.amount, 
         "chequenumber" => t.check_number,
         "date" => t.date.strftime("%Y-%m-%d"),
+        "date2" => t.date.strftime("%Y-%m-%d"),
         "transactionid" => t.fit_id,
         "memo" => t.memo,
         "payee" => t.payee,

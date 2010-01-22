@@ -1,8 +1,4 @@
 class PcFinancial < BankAccount
-  def name
-    "PC account #{config[:account_id]}"
-  end
-  
   def download_data
     # return File.read("#{ENV['HOME']}/Downloads/PCF.qfx")
     

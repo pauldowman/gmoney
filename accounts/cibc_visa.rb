@@ -1,8 +1,4 @@
 class CibcVisa < CreditCardAccount
-  def name
-    "CIBC VISA"
-  end
-  
   def download_data
     # return File.read("#{ENV['HOME']}/Downloads/cibcvisa.ofx")
     
