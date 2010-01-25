@@ -47,7 +47,7 @@ class AccountBase
     txns = @ofx_txns.collect do |t|
       {
         "accountname" => self.name,
-        (t.amount.to_f >= 0 ? "deposit" : "withdrawal") => t.amount, 
+        (t.amount.to_f >= 0 ? "deposit" : "withdrawal") => t.amount.to_f.abs, 
         "chequenumber" => t.check_number,
         "date" => t.date.strftime("%Y-%m-%d"),
         "date2" => t.date.strftime("%Y-%m-%d"),
