@@ -25,7 +25,7 @@ spreadsheet = Spreadsheet.new(@gs_key, @gdata_user, @gdata_pass)
         spreadsheet.add_row(worksheet, txn)
       rescue Exception => e
         if retried
-          puts "error: #{e.inspect}"
+          raise e
         else
           retried = true
           puts "error: #{e.inspect}, retrying..."
@@ -37,5 +37,10 @@ spreadsheet = Spreadsheet.new(@gs_key, @gdata_user, @gdata_pass)
     puts ""
   rescue Exception => e
     puts "ERROR: \n#{e.inspect}\n#{e.backtrace.join("\n")}"
+    puts "Pausing..."
+    sleep
   end
 end
+
+puts "Finshed."
+
