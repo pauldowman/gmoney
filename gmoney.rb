@@ -13,6 +13,8 @@ require "#{ENV['HOME']}/.gmoney/config.rb"
 
 spreadsheet = Spreadsheet.new(@gs_key, @gdata_user, @gdata_pass)
 
+@retval = 0
+
 @accounts.each do |account|
   begin
     worksheet = account.config[:worksheet]
@@ -37,10 +39,10 @@ spreadsheet = Spreadsheet.new(@gs_key, @gdata_user, @gdata_pass)
     puts ""
   rescue Exception => e
     puts "ERROR: \n#{e.inspect}\n#{e.backtrace.join("\n")}"
-    puts "Pausing..."
-    sleep
+    @retval = 1
   end
 end
 
-puts "Finshed."
+puts "Finished."
+exit @retval
 
