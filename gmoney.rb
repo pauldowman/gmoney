@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require "rubygems"
+require "bundler/setup"
+
 require "#{File.dirname(__FILE__)}/lib/account_base"
 require "#{File.dirname(__FILE__)}/lib/bank_account"
 require "#{File.dirname(__FILE__)}/lib/credit_card_account"
