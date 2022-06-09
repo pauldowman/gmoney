@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 gem "rspec", :require => "spec"
 
-gem "mechanize", "1.0.0"
+gem "mechanize", "2.8.5"
 gem "ofx-parser", "1.0.2"
 
 
